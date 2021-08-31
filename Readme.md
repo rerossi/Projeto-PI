@@ -4,4 +4,4 @@
 
 - A idéia do projeto é que seja divida em várias seções com produtos para alguel. Por exemplo: equipamentos esportivos, ferramentas, aparelhos eletrônicos, eletroportateis, etc.
 
-- Entre os benefícios do projeto, é que o usuário pode testar antes de comprar o produto, sendo assim economizando dinheiro alugando um produto que seria para um uso pontual ao invés de comprar e deixar um produto "encostado" depois. Além disso gerando conscientização do consumo excessivo de bens. 
+- Entre os benefícios do projeto, é que o usuário pode testar antes de comprar o produto, sendo assim economizando dinheiro alugando um produto que seria para um uso pontual ao invés de comprar e deixar um produto "encostado" depois. Além disso gerando conscientização do consumo excessivo de bens!
