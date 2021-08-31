@@ -1,6 +1,6 @@
 # Projeto Integrador - Rentall
 
-- Desenvolvimento de uma página web dinâmica, com público alvo para qualquer pessoa que queira alugar algo (literalmente qualquer coisa), ela apenas precisa ser maior de 18 anos!
+- Desenvolvimento de uma página web dinâmica, com público alvo para qualquer pessoa que queira alugar algo (literalmente qualquer coisa), ela apenas precisa ser maior de 18 ano.
 
 - A idéia do projeto é que seja divida em várias seções com produtos para alguel. Por exemplo: equipamentos esportivos, ferramentas, aparelhos eletrônicos, eletroportateis, etc...
 
