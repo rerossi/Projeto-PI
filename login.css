@@ -13,7 +13,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(180deg, blue 50%, white 50%);
+    background: linear-gradient(180deg, #80df49 50%, white 50%);
 }
 
  main.container {
@@ -30,3 +30,132 @@ body {
      margin-bottom: 2rem;
      position: relative;
  }
+
+main h2::before {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 10%;
+    bottom: 0px;
+    left: 0px;
+    border-radius: 8px;
+    background: #80df49;
+
+ }
+
+ form{
+     display: flex;
+     flex-direction: column;
+ }
+ .input-field {
+     position: relative;
+ }
+
+ form .input-field:first-child {
+     margin-bottom: 1.5rem;
+ }
+
+ form .input-field .underline::before {
+    content: '';
+    position: absolute;
+    height: 1.5px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+ }
+
+ form .input-field .underline::after {
+        content: '';
+        position: absolute;
+        height: 1.5px;
+        width: 100%;
+        bottom: -5px;
+        left: 0;
+        background: linear-gradient(45deg, #80df49, #008860);
+        transform: scaleX(0);
+        transition: all .3s ease-in-out;
+        transform-origin: left;
+}
+
+.input-field input:focus ~ .underline::after{
+    transform: scaleX(1);
+}
+
+ .input-field input {
+     outline: none;
+     font-size: 0.9rem;
+     color: rgba(0, 0, 0, 0.7);
+ }
+
+ .input-field input ::placeholder {
+     color: rgba(0, 0, 0, 0.5)
+ } 
+ 
+ form input[type="submit"]{
+    margin-top: 2rem;
+    padding: 0.4rem;
+    background: linear-gradient(to left, #32cd32, #008860); 
+    cursor: pointer;
+    color: white;
+    font-size: 1rem;
+    font-weight:300px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+} 
+
+form input[type="submit"]:hover{
+    letter-spacing: 0.5px;
+    background: linear-gradient(to right, #32cd32, #008860); 
+
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.footer span{
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.footer .social-field{
+    padding: 0.4rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.footer .social-field a i {
+    margin: 0 0.8rem;
+    width: 15px;
+}
+
+.footer .social-field a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer .social-field.google{
+    background: linear-gradient(to left, #5daffc,  #08a860);
+}
+
+.footer .social-field.facebook{
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+}
+
+.footer .novo-usuario a{
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    margin-top: .8rem;
+    
+    
+}
