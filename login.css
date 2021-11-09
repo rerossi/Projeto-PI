@@ -13,7 +13,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(180deg, #80df49 50%, white 50%);
+    background: linear-gradient(180deg, #247ba0 50%, white 50%);
 }
 
  main.container {
@@ -39,7 +39,7 @@ main h2::before {
     bottom: 0px;
     left: 0px;
     border-radius: 8px;
-    background: #80df49;
+    background: #00a8ff;
 
  }
 
@@ -72,7 +72,7 @@ main h2::before {
         width: 100%;
         bottom: -5px;
         left: 0;
-        background: linear-gradient(45deg, #80df49, #008860);
+        background: linear-gradient(45deg, #00ced1, #00a8ff);
         transform: scaleX(0);
         transition: all .3s ease-in-out;
         transform-origin: left;
@@ -95,7 +95,7 @@ main h2::before {
  form input[type="submit"]{
     margin-top: 2rem;
     padding: 0.4rem;
-    background: linear-gradient(to left, #32cd32, #008860); 
+    background: linear-gradient(to left, #00ced1, #00a8ff); 
     cursor: pointer;
     color: white;
     font-size: 1rem;
@@ -106,7 +106,7 @@ main h2::before {
 
 form input[type="submit"]:hover{
     letter-spacing: 0.5px;
-    background: linear-gradient(to right, #32cd32, #008860); 
+    background: linear-gradient(to right, #00ced1, #00a8ff); 
 
 }
 
@@ -142,20 +142,19 @@ form input[type="submit"]:hover{
 }
 
 .footer .social-field.google{
-    background: linear-gradient(to left, #5daffc,  #08a860);
+    background: linear-gradient(to left,  #fddd00, #c43035);
 }
 
 .footer .social-field.facebook{
-    background: linear-gradient(to right, #1e3c72, #2a5298);
+    background: linear-gradient(to right, #1e3c72, #00a8ff);
 }
 
 .footer .novo-usuario a{
     color: rgba(0, 0, 0, 0.7);
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1.0rem;
     display: flex;
     flex-direction: column;
     margin-top: .8rem;
-    
-    
+
 }
