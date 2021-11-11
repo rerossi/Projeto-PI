@@ -30,7 +30,7 @@
             $_SESSION['nome'] = $registro['nome'];
             $_SESSION['id'] = $registro['id'];
 
-            include('index.html');
+            include('index.php');
             
         }else{
 

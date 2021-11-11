@@ -1,23 +1,44 @@
+<?php
+
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+
+    //session_start();
+
+  if(!isset($_SESSION['id'])){
+      echo "Faça o login antes";
+      exit();
+    } 
+  require_once('banco/conecta.php');
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
+
   <meta charset="UTF-8">
 
-  <title>Document</title>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-    crossorigin="anonymous"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Rentall</title>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous">
+      </script>
+
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
   <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      user-select: none;
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
     }
 
     @media (min-width: 768px) {
@@ -31,28 +52,28 @@
 
 <body>
   <header>
+
     <nav class="navbar navbar-light " style="background-color:whitesmoke;">
       <div class="container-fluid">
         <div class="row w-100">
           <div class="col-2">
             <a class="navbar-brand" href="#">
-              <img src="imagens/logo.png" alt="" width="10%" class="d-inline-block align-text-top">
-              Rentall
-
+              <img src="imagens/Logo-completo-azul.png" alt="" width="150px" class="d-inline-block align-text-center">
             </a>
           </div>
 
           <div class="col-8">
             <div class="justify-content-center mt-2 row" style="margin-left: 70px;">
               <form class="d-flex col-8">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <input class="form-control me-2" style = "min-width: auto; "type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline" style="color:rgb(20, 124, 162); background-color: white; border-color: rgb(20, 124, 162);" type="submit">Search</button>
               </form>
             </div>
           </div>
 
           <div class="col-2 text-end">
-            <img src="imagens/login.png" width="40px">
+           <a href="#">  <img src="imagens/login.png" width="40px" > </a>
+            <spam ><a href= "#" style= "text-decoration: none; ">Sair </a></spam>
 
           </div>
         </div>
@@ -62,7 +83,7 @@
           <ul class="nav justify-content-center">
 
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" style="color: green;" id="navbarDropdown" role="button"
+              <a class="nav-link dropdown-toggle" href="#" style="color:rgb(20, 124, 162);" id="navbarDropdown" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 Dropdown
               </a>
@@ -74,16 +95,16 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" style="color:green;">Ofertas</a>
+              <a class="nav-link" href="#" style="color:rgb(20, 124, 162);">Ofertas</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" style="color: green;">Baixe o App</a>
+              <a class="nav-link" href="#" style="color:rgb(20, 124, 162);">Baixe o App</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" style="color: green;">Sobre nós</a>
+              <a class="nav-link" href="#" style="color:rgb(20, 124, 162);">Sobre nós</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" style="color: green;">Contato</a>
+              <a class="nav-link" href="#" style="color:rgb(20, 124, 162);">Contato</a>
             </li>
           </ul>
           </div>
@@ -101,7 +122,7 @@
 
   <main>
     <!--CARROuSSEL-->
-    <section class="pt-5">
+    <section class="pt-2">
       <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
@@ -204,59 +225,43 @@
 
   </section>
 
-  <div class="container">
-    <footer class="row row-cols-5 py-4  border-top">
-      <img src="imagens/logo.png" width="10px">
+  <div class="container-fluid">
 
+    <footer class="row row-cols-5 py-4  border-top" style="background-color: rgb(20, 124, 162);">
+      <img src="imagens/logo-branco.png" width="50px">
 
       <div class="col"></div>
 
-
-
       <div class="col">
-        <h5 style="color: blue; font-family: cursive;">Conheça a Rentall</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2" style="font-size: 15px;"><a href="#" class="nav-link p-0 text-muted">Trabalhe
-              conosco</a></li>
-          <li class="nav-item mb-2" style="font-size: 15px;"><a href="#" class="nav-link p-0 text-muted">Perguntas
-              Frequentes</a></li>
-          <li class="nav-item mb-2" style="font-size: 15px;"><a href="#" class="nav-link p-0 text-muted">Politica de
-              Privacidade</a></li>
-          <li class="nav-item mb-2" style="font-size: 15px;"><a href="#" class="nav-link p-0 text-muted">Sobre a
-              Rentall</a></li>
-          <li class="nav-item mb-2" style="font-size: 15px;"><a href="#" class="nav-link p-0 text-muted">Imprensa</a>
-          </li>
+        <h5 style="color: white;"> <b> Conheça a Rentall </b> </h5>
+        <ul class="nav flex-column"  style="color: white;">
+          <li class="nav-item mb-2" style="font-size: 15px;"> Perguntas frequentes</b></li>
+          <li class="nav-item mb-2" style="font-size: 15px;"> Política de privacidade </li>
+          <li class="nav-item mb-2" style="font-size: 15px;">Sobre o Rentall</li>
+          <li class="nav-item mb-2" style="font-size: 15px;"> Deficiente auditivo</li>
+          <li class="nav-item mb-2" style="font-size: 15px;">Imprensa</li>
         </ul>
       </div>
 
       <div class="col">
-        <h5 style="color: blue; font-family: cursive;">Central de Ajuda</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2" style="font-size: 15px;"><a href="#" class="nav-link p-0 text-muted">Chat online</a>
-          </li>
-          <li class="nav-item mb-2" style="font-size: 15px;"><a href="#" class="nav-link p-0 text-muted">SAC 0800</a>
-          </li>
-          <li class="nav-item mb-2" style="font-size: 15px;"><a href="#" class="nav-link p-0 text-muted">Fale
-              conosco</a></li>
-          <li class="nav-item mb-2" style="font-size: 15px;"><a href="#" class="nav-link p-0 text-muted">Deficiente
-              auditivo</a></li>
-          <li class="nav-item mb-2" style="font-size: 15px;"><a href="#" class="nav-link p-0 text-muted">E-mail</a></li>
+        <h5 style="color: white;"> <b> Central de Ajuda </b></h5>
+        <ul class="nav flex-column"  style="color: white;">
+          <li class="nav-item mb-2" >Chat online</li>
+          <li class="nav-item mb-2" style="font-size: 15px;"> SAC 0800 </li>
+          <li class="nav-item mb-2" style="font-size: 15px;">Fale conosco</li>
+          <li class="nav-item mb-2" style="font-size: 15px;"> Deficiente auditivo</li>
+          <li class="nav-item mb-2" style="font-size: 15px;">E-mail</li>
         </ul>
       </div>
 
       <div class="col">
-        <h5 style="color: blue; font-family: cursive;">Para Empresas</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2" style="font-size: 15px;"><a href="#" class="nav-link p-0 text-muted">Parcerias</a>
-          </li>
-          <li class="nav-item mb-2" style="font-size: 15px;"><a href="#" class="nav-link p-0 text-muted">Atendimento</a>
-          </li>
-          <li class="nav-item mb-2" style="font-size: 15px;"><a href="#" class="nav-link p-0 text-muted">Descontos</a>
-          </li>
-          <li class="nav-item mb-2" style="font-size: 15px;"><a href="#" class="nav-link p-0 text-muted">Programa de
-              pontos</a></li>
-          <li class="nav-item mb-2" style="font-size: 15px;"><a href="#" class="nav-link p-0 text-muted">Area
-              exclusiva</a></li>
+        <h5 style="color: white;"> <b> Para Empresas </b> </h5>
+        <ul class="nav flex-column"  style="color: white;">
+          <li class="nav-item mb-2"> Parcerias </li>
+          <li class="nav-item mb-2" style="font-size: 15px;"> Atendimentos </li>
+          <li class="nav-item mb-2" style="font-size: 15px;">Descontos</li>
+          <li class="nav-item mb-2" style="font-size: 15px;"> Ptogramas de ponotos</li>
+          <li class="nav-item mb-2" style="font-size: 15px;">Area exclusiva</li>
         </ul>
       </div>
 
@@ -266,7 +271,7 @@
   </div>
 
 
-  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
 
 
 </body>
