@@ -12,6 +12,8 @@
     } 
   require_once('banco/conecta.php');
 
+
+
 ?>
 
 
@@ -50,75 +52,12 @@
 
 </head>
 
-<body>
-  <header>
+  <?php  
+      include 'telas/navbar.php';
+  ?>
 
-    <nav class="navbar navbar-light " style="background-color:whitesmoke;">
-      <div class="container-fluid">
-        <div class="row w-100">
-          <div class="col-2">
-            <a class="navbar-brand" href="#">
-              <img src="imagens/Logo-completo-azul.png" alt="" width="150px" class="d-inline-block align-text-center">
-            </a>
-          </div>
-
-          <div class="col-8">
-            <div class="justify-content-center mt-2 row" style="margin-left: 70px;">
-              <form class="d-flex col-8">
-                <input class="form-control me-2" style = "min-width: auto; "type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline" style="color:rgb(20, 124, 162); background-color: white; border-color: rgb(20, 124, 162);" type="submit">Search</button>
-              </form>
-            </div>
-          </div>
-
-          <div class="col-2 text-end">
-           <a href="#">  <img src="imagens/login.png" width="40px" > </a>
-            <spam ><a href= "#" style= "text-decoration: none; ">Sair </a></spam>
-
-          </div>
-        </div>
-
-        <div class="row w-100">
-          <div class="col-12">
-          <ul class="nav justify-content-center">
-
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" style="color:rgb(20, 124, 162);" id="navbarDropdown" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Esportes</a></li>
-                <li><a class="dropdown-item" href="#">Games</a></li>
-                <li><a class="dropdown-item" href="#">Eletroportateis</a></li>
-                <li><a class="dropdown-item" href="#">Ferramentas</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" style="color:rgb(20, 124, 162);">Ofertas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" style="color:rgb(20, 124, 162);">Baixe o App</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" style="color:rgb(20, 124, 162);">Sobre nós</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" style="color:rgb(20, 124, 162);">Contato</a>
-            </li>
-          </ul>
-          </div>
-
-        </div>
-
-
-      </div>
-
-
-
-    </nav>
-
-  </header>
+  
+ 
 
   <main>
     <!--CARROuSSEL-->
@@ -226,54 +165,7 @@
   </section>
 
   <div class="container-fluid">
-
-    <footer class="row row-cols-5 py-4  border-top" style="background-color: rgb(20, 124, 162);">
-      <img src="imagens/logo-branco.png" width="50px">
-
-      <div class="col"></div>
-
-      <div class="col">
-        <h5 style="color: white;"> <b> Conheça a Rentall </b> </h5>
-        <ul class="nav flex-column"  style="color: white;">
-          <li class="nav-item mb-2" style="font-size: 15px;"> Perguntas frequentes</b></li>
-          <li class="nav-item mb-2" style="font-size: 15px;"> Política de privacidade </li>
-          <li class="nav-item mb-2" style="font-size: 15px;">Sobre o Rentall</li>
-          <li class="nav-item mb-2" style="font-size: 15px;"> Deficiente auditivo</li>
-          <li class="nav-item mb-2" style="font-size: 15px;">Imprensa</li>
-        </ul>
-      </div>
-
-      <div class="col">
-        <h5 style="color: white;"> <b> Central de Ajuda </b></h5>
-        <ul class="nav flex-column"  style="color: white;">
-          <li class="nav-item mb-2" >Chat online</li>
-          <li class="nav-item mb-2" style="font-size: 15px;"> SAC 0800 </li>
-          <li class="nav-item mb-2" style="font-size: 15px;">Fale conosco</li>
-          <li class="nav-item mb-2" style="font-size: 15px;"> Deficiente auditivo</li>
-          <li class="nav-item mb-2" style="font-size: 15px;">E-mail</li>
-        </ul>
-      </div>
-
-      <div class="col">
-        <h5 style="color: white;"> <b> Para Empresas </b> </h5>
-        <ul class="nav flex-column"  style="color: white;">
-          <li class="nav-item mb-2"> Parcerias </li>
-          <li class="nav-item mb-2" style="font-size: 15px;"> Atendimentos </li>
-          <li class="nav-item mb-2" style="font-size: 15px;">Descontos</li>
-          <li class="nav-item mb-2" style="font-size: 15px;"> Ptogramas de ponotos</li>
-          <li class="nav-item mb-2" style="font-size: 15px;">Area exclusiva</li>
-        </ul>
-      </div>
-
-
-    </footer>
-
+    <?php 
+       include 'telas/footer.php';
+    ?>
   </div>
-
-
-
-
-
-</body>
-
-</html>

@@ -30,7 +30,7 @@
             $_SESSION['nome'] = $registro['nome'];
             $_SESSION['id'] = $registro['id'];
 
-            include('index.php');
+            include('telas/index.php');
             
         }else{
 
