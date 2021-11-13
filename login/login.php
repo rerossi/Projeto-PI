@@ -4,7 +4,7 @@
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
 
-    require_once('banco/conecta.php');
+    require_once('../banco/conecta.php');
 
     
     session_start();
@@ -30,7 +30,7 @@
             $_SESSION['nome'] = $registro['nome'];
             $_SESSION['id'] = $registro['id'];
 
-            include('telas/index.php');
+            include('../telas/index.php');
             
         }else{
 

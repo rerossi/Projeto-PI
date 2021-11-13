@@ -1,7 +1,7 @@
 </body>
 
     <footer class="row row-cols-5 py-4  border-top" style="background-color: rgb(20, 124, 162);">
-        <img src="imagens/logo-branco.png" width="50px">
+        <img src="../imagens/logo-branco.png" width="50px">
 
         <div class="col"></div>
 

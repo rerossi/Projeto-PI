@@ -7,7 +7,7 @@
     <div class="row w-100">
       <div class="col-2">
         <a class="navbar-brand" href="#">
-          <img src="imagens/Logo-completo-azul.png" alt="" width="150px" class="d-inline-block align-text-center">
+          <img src="../imagens/Logo-completo-azul.png" alt="" width="150px" class="d-inline-block align-text-center">
         </a>
       </div>
 
@@ -21,8 +21,16 @@
       </div>
 
       <div class="col-2 text-end">
-       <a href="#">  <img src="imagens/login.png" width="40px" > </a>
-        <spam ><a href= "#" style= "text-decoration: none; ">Sair </a></spam>
+       <a href="../login/login.html">  <img src="../imagens/login.png" width="40px" > </a>
+        <?php
+
+            if(!empty($_SESSION)){
+              ?>
+                  <a href= "../login/sair.php" style= "text-decoration: none;"> <img src="../imagens/logout.png" width="28px"> </a>
+
+              <?php
+            }
+        ?>
 
       </div>
     </div>
@@ -34,7 +42,7 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" style="color:rgb(20, 124, 162);" id="navbarDropdown" role="button"
             data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+            Categorias
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Esportes</a></li>
