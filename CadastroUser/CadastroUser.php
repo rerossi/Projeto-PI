@@ -6,32 +6,26 @@ error_reporting(E_ALL);
 
 require_once('../banco/conecta.php');
 
-/*
-$_POST['nome']  = $_POST['nome']    ?? '';
-$_POST['sobrenome']  = $_POST['sobrenome']    ?? '';
-$_POST['email']  = $_POST['email']    ?? '';
-$_POST['senha']  = $_POST['senha']    ?? '';
+/*$nome = $_POST['nome'] ?? false;
+$sobrenome = $_POST['sobrenome'] ?? false;
+$email = $_POST['email'] ?? false;
+$senha = $_POST['senha'] ?? false;
 */
-
-$nome = $_POST['nome'] ?? false;
-
-if ($nome) {
     
-    $stmt = $bd -> prepare('    INSERT INTO rentall (nome) 
-                                VALUES (:nome)'); 
+    $stmt = $bd -> prepare('    INSERT INTO usuario (nome, sobrenome, email, senha ) 
+                                VALUES (:nome, :sobrenome, :email, :senha)'); 
 
-    if ($stmt -> execute([':nome' => $nome]) ){
+    $valores[':nome'] = $_POST['nome'];                                
+    $valores[':sobrenome'] = $_POST['sobrenome'];                                
+    $valores[':email'] = $_POST['email'];                                
+    $valores[':senha'] = $_POST['senha'];                                
 
-        echo "$nome gravado com sucesso!";
+    if ($stmt -> execute($valores)){
+
+        echo "Gravado com sucesso!";
 
     }else{
-
-        echo "Erro ao tentar gravar $nome!";
+        var_dump($stmt);
+        echo "Erro ao tentar gravar!";
     }
 
-
-
-}else{
-
-    echo 'O campo nome é obrigatório';
-}
