@@ -24,12 +24,15 @@
        <a href="../login/login.html">  <img src="../imagens/login.png" width="40px" > </a>
         <?php
 
+        session_start();
+            
+
             if(!empty($_SESSION)){
               ?>
                   <a href= "../login/sair.php" style= "text-decoration: none;"> <img src="../imagens/logout.png" width="28px"> </a>
 
               <?php
-            }
+            } 
         ?>
 
       </div>
