@@ -7,7 +7,6 @@
     session_start();
     require_once('../banco/conecta.php');
 
-
     $password = $_POST['password'];
     $email = $_POST['email'];
 
@@ -29,16 +28,14 @@
              $_SESSION['nome'] = $registro['nome'];
              $_SESSION['id'] = $registro['id'];
 
-            header('Location: ../telas/index.php');
+            header('Location:../telas/index.php');
 
-        }else{
+        }   else{
+                session_destroy();           
+        echo "Credenciais inválidas <br><br><a href='../telas/formlogin.html'>Tente novamente</a>";
+                }
 
+    }   else{
             session_destroy();
-            echo "Credenciais inválidas <br><br><a href='login.html'>Tente novamente</a>";
-            }
-    }else{
-
-            session_destroy();
-
-            echo "Credenciais inválidas <br><br><a href='login.html'>Tente novamente</a>";
+        echo "Credenciais inválidas <br><br><a href='../telas/formlogin.html'>Tente novamente</a>";
     }

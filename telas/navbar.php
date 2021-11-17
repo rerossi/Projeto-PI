@@ -21,7 +21,7 @@
       </div>
 
       <div class="col-2 text-end">
-       <a href="../login/login.html">  <img src="../imagens/login.png" width="40px" > </a>
+       <a href="../telas/formlogin.html">  <img src="../imagens/login.png" width="40px" > </a>
         <?php
 
         session_start();
