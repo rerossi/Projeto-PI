@@ -18,6 +18,13 @@ if(isset($_POST['excluir'])){
 
 }
 
+if(isset($_POST['editar'])){
+
+    include '../telas/formProduto.php';
+    include '../telas/footer.php';
+       
+}
+
 $lista = $objcadastroproduto->listar();
 
 include '../telas/lista.php';

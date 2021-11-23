@@ -1,8 +1,7 @@
 
-<body>
-<header>
 
 <nav class="navbar navbar-light " style="background-color:whitesmoke;">
+
   <div class="container-fluid">
     <div class="row w-100">
       <div class="col-2">
@@ -21,18 +20,24 @@
       </div>
 
       <div class="col-2 text-end">
-       <a href="../telas/formlogin.html">  <img src="../imagens/login.png" width="40px" > </a>
+
+      
         <?php
 
         session_start();
             
 
             if(!empty($_SESSION)){
-              ?>
-                  <a href= "../login/sair.php" style= "text-decoration: none;"> <img src="../imagens/logout.png" width="28px"> </a>
+              ?>  
+                  <span style= "text-decoration: none;">  <?php echo " Olá, {$_SESSION['nome']} " ?>  </span>
+                  <a href= "../login/sair.php" style= "text-decoration: none;"> <img src="../imagens/logout.png" width="22px" style= "margin-left: 15px;"> </a>
 
               <?php
-            } 
+            } else {
+              ?>
+                 <a href="../telas/formlogin.php">  <img src="../imagens/login.png" width="40px" > </a>
+              <?php
+            }
         ?>
 
       </div>
@@ -43,17 +48,18 @@
       <ul class="nav justify-content-center">
 
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" style="color:rgb(20, 124, 162);" id="navbarDropdown" role="button"
-            data-bs-toggle="dropdown" aria-expanded="false">
-            Categorias
-          </a>
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"  aria-expanded="false" style="color:rgb(20, 124, 162);" id="navbarDropdown"  > Categorias </a> 
+          
+            
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Esportes</a></li>
             <li><a class="dropdown-item" href="#">Games</a></li>
             <li><a class="dropdown-item" href="#">Eletroportateis</a></li>
             <li><a class="dropdown-item" href="#">Ferramentas</a></li>
+
           </ul>
         </li>
+
         <li class="nav-item">
           <a class="nav-link" href="#" style="color:rgb(20, 124, 162);">Ofertas</a>
         </li>
@@ -66,6 +72,18 @@
         <li class="nav-item">
           <a class="nav-link" href="#" style="color:rgb(20, 124, 162);">Contato</a>
         </li>
+
+        <?php  
+        if(!empty($_SESSION)){  
+          ?>
+            <li class="nav-item">
+          <a class="nav-link" href="../crud/crud.php" style="color:rgb(20, 124, 162);"> Meus Produtos </a>            
+            </li>
+          
+          <?php  
+          }  
+          ?>
+
       </ul>
       </div>
 
@@ -75,7 +93,6 @@
   </div>
 
 </nav>
-
 
 
 

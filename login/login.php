@@ -32,10 +32,10 @@
 
         }   else{
                 session_destroy();           
-        echo "Credenciais inválidas <br><br><a href='../telas/formlogin.html'>Tente novamente</a>";
+        echo "Credenciais inválidas <br><br><a href='../telas/formlogin.php'>Tente novamente</a>";
                 }
 
     }   else{
             session_destroy();
-        echo "Credenciais inválidas <br><br><a href='../telas/formlogin.html'>Tente novamente</a>";
+        echo "Credenciais inválidas <br><br><a href='../telas/formlogin.php'>Tente novamente</a>";
     }

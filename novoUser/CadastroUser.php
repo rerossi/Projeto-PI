@@ -33,7 +33,7 @@ if ($nome && $sobrenome && $email && $senha){
     
         ) {
 
-            header('Location: ../telas/formlogin.html');       
+            header('Location: ../telas/formlogin.php');       
 
     } else { 
         echo '<pre>';
