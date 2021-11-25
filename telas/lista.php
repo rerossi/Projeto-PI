@@ -23,7 +23,7 @@
                     <td><?php echo $cadastroproduto['modelo']; ?></td>
                     <td><?php echo $cadastroproduto['marca']; ?></td>
                     <td><?php echo $cadastroproduto['descricao']; ?></td>
-                    <td><?php echo  '<img src= "../produto/imagem-produto/ '.$cadastroproduto['imagem'].' " width="100px" heigth="100px" alt="imagem"> '?> </td> 
+                    <td><?php echo  '<img src= "../produto/'.$cadastroproduto['imagem'].'" width="100px" heigth="100px" alt="imagem"> '?> </td> 
                     <td><button name="editar" class="btn btn-success my-2 editbtn">Editar</button></td>
                     <td><button name="excluir" class="btn btn-danger my-2" value="<?php echo $id; ?>">Excluir</button></td>
                     </tr>

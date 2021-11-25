@@ -37,7 +37,7 @@ if ($titulo && $opcao && $modelo && $marca && $descricao) {
                     die();
         }
 
-        $arquivo = __DIR__ .'/imagem-produto/' . rand(1, 9999999999) . 'user.jpg';
+        $arquivo = 'imagem-produto/' . rand(1, 9999999999) . 'user.jpg';
 
         //para um local definitivo. move_uploaded_file(lugar temporário, lugar definitivo)
         move_uploaded_file(
