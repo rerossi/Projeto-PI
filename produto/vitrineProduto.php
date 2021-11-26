@@ -17,7 +17,6 @@ include '../telas/navbar.php';
             <div class="col">
                 <img src="https://via.placeholder.com/600x400" alt="">
             </div>
-
             <div class="col">
                 <h3 id="nomeProduto">Fone Gamer</h3>
                 <p id="descProduto" class="pt-2">

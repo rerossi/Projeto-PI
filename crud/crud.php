@@ -28,4 +28,6 @@ if(isset($_POST['editar'])){
 $lista = $objcadastroproduto->listar();
 
 include '../telas/lista.php';
+include '../produto/catologo.php';
+
 //header('Location:../telas/lista.php');

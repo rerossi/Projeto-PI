@@ -12,35 +12,31 @@ include '../telas/navbar.php';
 
 <main class="pt-5 pb-5">
     <section class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center pb-4">
+            <?php
 
-            <div class="card mx-4" style="width: 18rem;">
-                <img src="https://via.placeholder.com/300x250" id="imgProduto" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title" id="titulo">Card title</h5>
-                    <p class="card-text" id="descricao">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <button class="botao btn "><a href="#" class="text-decoration-none text-reset">Ver Produto</a></button>
+            include '../banco/conecta.php';
+
+            $query = $bd->query("SELECT * FROM produto");
+            $registros = $query->fetchAll();
+
+            foreach ($registros as $registro) {
+                   
+               
+
+
+            ?>
+                <div class="card mx-4 pt-4 pb-4" style="width: 18rem;">
+                    <img src="<?php echo "http://localhost/Projeto-PI/produto/" . $registro['imagem'] ?>" id="imgProduto" class="card-img-top" alt="...">
+                    <div class="card-body ">
+                        <h5 class="card-title" id="titulo"><?php echo $registro['titulo']?></h5>
+                        <p class="card-text" id="descricao"><?php echo $registro['descricao']?></p>
+                        <button class="botao btn " id="btnProduto"><a href="vitrineProduto.php" class="text-decoration-none text-reset">Ver Produto</a></button>
+                    </div>
                 </div>
-            </div>
-
-            <div class="card mx-4" style="width: 18rem;">
-                <img src="https://via.placeholder.com/300x250" id="imgProduto" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title" id="titulo">Card title</h5>
-                    <p class="card-text" id="descricao">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <button class="botao btn"><a href="#" class="text-decoration-none text-reset">Ver Produto</a></button>
-                </div>
-            </div>
-
-            <div class="card mx-4" style="width: 18rem;">
-                <img src="https://via.placeholder.com/300x250" id="imgProduto" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title" id="titulo">Card title</h5>
-                    <p class="card-text" id="descricao">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <button class="botao btn "><a href="#" class="text-decoration-none text-reset">Ver Produto</a></button>
-                </div>
-            </div>
-
+            <?php
+            }
+            ?>
         </div>
     </section>
 </main>
