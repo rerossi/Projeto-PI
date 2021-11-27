@@ -21,18 +21,16 @@ include '../telas/navbar.php';
             $registros = $query->fetchAll();
 
             foreach ($registros as $registro) {
-                   
-               
-
-
             ?>
-                <div class="card mx-4 pt-4 pb-4" style="width: 18rem;">
-                    <img src="<?php echo "http://localhost/Projeto-PI/produto/" . $registro['imagem'] ?>" id="imgProduto" class="card-img-top" alt="...">
-                    <div class="card-body ">
+                <div class="card mx-4 pt-4 pb-3 mt-3" style="width: 18rem;">
+                    <div class="box-img">
+                        <img src="<?php echo "http://localhost/Projeto-PI/produto/" . $registro['imagem'] ?>" id="imgProduto" class="card-img-top" alt="...">
+                    </div>
+                    <section class="card-body my-auto  ">
                         <h5 class="card-title" id="titulo"><?php echo $registro['titulo']?></h5>
                         <p class="card-text" id="descricao"><?php echo $registro['descricao']?></p>
                         <button class="botao btn " id="btnProduto"><a href="vitrineProduto.php" class="text-decoration-none text-reset">Ver Produto</a></button>
-                    </div>
+                    </section>
                 </div>
             <?php
             }

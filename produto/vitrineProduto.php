@@ -11,6 +11,18 @@ include '../telas/navbar.php';
 <link rel="stylesheet" href="../css/vitrineProduto.css">
 
 <main class="pt-5 pb-5">
+
+<?php
+
+            include '../banco/conecta.php';
+
+            $query = $bd->query("SELECT * FROM produto WHERE id = 1");
+            $registros = $query->fetchAll();
+
+            var_dump($registros);
+
+?>
+
     <h2 class="text-center" id="categoria">Games</h2>
     <section class="container d-flex text-center justify-content-center align-items-center pt-3">
         <div class="row">
