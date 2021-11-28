@@ -12,64 +12,69 @@ include '../telas/navbar.php';
 
 <main class="pt-5 pb-5">
 
-<?php
+    <?php
 
-            include '../banco/conecta.php';
+    include '../banco/conecta.php';
 
-            $query = $bd->query("SELECT * FROM produto WHERE id = 1");
-            $registros = $query->fetchAll();
+    $query = $bd->query("SELECT * FROM produto WHERE id = 18");
+    $registros = $query->fetchAll();
 
-            var_dump($registros);
+    foreach ($registros as $registro) :
 
-?>
+       
 
-    <h2 class="text-center" id="categoria">Games</h2>
-    <section class="container d-flex text-center justify-content-center align-items-center pt-3">
-        <div class="row">
-            <div class="col">
-                <img src="https://via.placeholder.com/600x400" alt="">
-            </div>
-            <div class="col">
-                <h3 id="nomeProduto">Fone Gamer</h3>
-                <p id="descProduto" class="pt-2">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus hic asperiores deser. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, eos.
-                </p>
+    ?>
 
-                <section class="pt-2">
-                    <spam>Preço Aluguel: </spam>
-                    <spam id="precoAluguel">-</spam>
-                </section>
-
-
-                <section class="pt-2">
-                    <spam class="">Marca: </spam>
-                    <spam id="marca"> - </spam>
-                </section>
-
-                <section class="pt-2">
-                    <spam>Modelo: </spam>
-                    <spam id="modelo"> - </spam>
-                </section>
-
-
-                <spam class="d-block pt-2">Tempo Aluguel</spam>
-                <div class=" d-flex text-center justify-content-center">
-                    <select class="form-select w-50 ">
-                        <option value="1dia" id="1dia">1 dia</option>
-                        <option value="7dias" id="2dias">7 dias</option>
-                        <option value="15dias" id="3dias">15 dias</option>
-                        <option value="30dias" id="4dias">30 dias</option>
-                    </select>
+        <h2 class="text-center" id="categoria"><?php echo $registro['categoria'] ?></h2>
+        <section class="container d-flex text-center justify-content-center align-items-center pt-3">
+            <div class="row">
+                <div class="col">
+                    <img src="<?php echo "http://localhost/Projeto-PI/produto/" . $registro['imagem'] ?>" alt="" class="box-img">
                 </div>
+                <div class="col">
+                    <h3 id="nomeProduto"><?php echo $registro['titulo'] ?></h3>
+                    <p id="descProduto" class="pt-2">
+                        <?php echo $registro['descricao'] ?>
+                    </p>
+
+                    <section class="pt-2">
+                        <spam>Preço Aluguel: </spam>
+                        <spam id="precoAluguel"><?php echo $registro['preco'] ?></spam>
+                    </section>
 
 
-                <button class="botao btn btn-lg btn-success display-6 w-50 fs-5 white mt-4">
-                    <a href="#" class="text-decoration-none text-reset" id="alugarProduto">Alugar</a>
-                </button>
+                    <section class="pt-2">
+                        <spam class="">Marca: </spam>
+                        <spam id="marca"> <?php echo $registro['marca'] ?></spam>
+                    </section>
 
+                    <section class="pt-2">
+                        <spam>Modelo: </spam>
+                        <spam id="modelo"> <?php echo $registro['modelo'] ?></spam>
+                    </section>
+
+
+                    <spam class="d-block pt-2">Tempo Aluguel</spam>
+                    <div class=" d-flex text-center justify-content-center">
+                        <select class="form-select w-50 ">
+                            <option value="1dia" id="1dia">1 dia</option>
+                            <option value="7dias" id="2dias">7 dias</option>
+                            <option value="15dias" id="3dias">15 dias</option>
+                            <option value="30dias" id="4dias">30 dias</option>
+                        </select>
+                    </div>
+
+
+                    <button class="botao btn btn-lg btn-success display-6 w-50 fs-5 white mt-4">
+                        <a href="#" class="text-decoration-none text-reset" id="alugarProduto">Alugar</a>
+                    </button>
+
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    <?php
+    endforeach
+    ?>
 </main>
 
 <div class="container-fluid">
