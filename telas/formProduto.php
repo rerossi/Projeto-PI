@@ -19,11 +19,11 @@
                   <div class="mb-3">
                       <select name="opcao" class="form-select" required>
                       <option value= null > Categoria</option>  
-                      <option value="eletronicos" id="eletronicos">Eletrônicos</option>
-                      <option value="esportes" id="esportes">Esportes</option>
-                      <option value="ferramentas" id="ferramentas">Ferramentas</option>
-                      <option value="games" id="games">Games</option>
-                      <option value="domestico" id="domestico">Utensílios Doméstico</option>                    
+                      <option value="Eletronicos" id="eletronicos">Eletrônicos</option>
+                      <option value="Esportes" id="esportes">Esportes</option>
+                      <option value="Ferramentas" id="ferramentas">Ferramentas</option>
+                      <option value="Games" id="games">Games</option>
+                      <option value="Domestico" id="domestico">Utensílios Doméstico</option>                    
                       </select>
                   </div>
                   
