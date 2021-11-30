@@ -21,7 +21,7 @@ include '../telas/navbar.php';
 
     foreach ($registros as $registro) :
 
-       
+      
 
     ?>
 

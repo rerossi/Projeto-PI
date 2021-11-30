@@ -1,9 +1,9 @@
 <main> 
 <link rel="stylesheet" href="../css/lista.css">
-<div> 
-        <a href = "../telas/formProduto.php"> <button class="btn btn-primary"> Butaun </button> </a>
+<div class="text-center justify-content-center d-flex align-items-center pb-3 "> 
+<button class="btn botao btn-dark"><a href = "../telas/formProduto.php" class="text-decoration-none text-reset">  Cadastrar Produto  </a></button>
 </div>
-    <section class="container,  fundo">
+    <section class="container fundo">
         <h2> Meus Produtos </h2>
             <form method="post" action="">
                 <table class="table ">
