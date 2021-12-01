@@ -37,7 +37,7 @@
                     </div>
 
                     <span class="novo-usuario">
-                        <a href="novoUser.html">
+                        <a href="novoUser.php">
                          Cadastre-se
                         </a>
                         </span>
