@@ -5,7 +5,7 @@
   <div class="container-fluid">
     <div class="row w-100">
       <div class="col-2">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="../telas/index.php">
           <img src="../imagens/Logo-completo-azul.png" alt="" width="150px" class="d-inline-block align-text-center">
         </a>
       </div>
