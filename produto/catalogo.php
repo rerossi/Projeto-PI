@@ -31,7 +31,7 @@ include '../telas/navbar.php';
                     <section class="card-body my-auto  ">
                         <h5 class="card-title" id="titulo"><?php echo $registro['titulo']?></h5>
                         <p class="card-text" id="descricao"><?php echo $registro['descricao']?></p>
-                        <button class="botao btn " id="btnProduto" value="<?php $registro['id'] ?>"><a href="vitrineProduto.php" class="text-decoration-none text-reset">Ver Produto</a></button>
+                        <button class="botao btn " id="btnProduto" value="<?php $registro['id'] ?>"><a href="vitrineProduto.php?id=<?php echo $registro['id'] ?>" class="text-decoration-none text-reset">Ver Produto</a></button>
                     </section>
                 </div>
             <?php

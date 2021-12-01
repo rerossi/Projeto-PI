@@ -10,8 +10,6 @@ $objcadastroproduto = new cadastroproduto($bd);
 
 include '../telas/header.php';
 
-
-
 if(isset($_POST['excluir'])){
 
     $excluido = $objcadastroproduto->excluir($_POST['excluir']);
@@ -23,6 +21,10 @@ if(isset($_POST['editar'])){
     include '../telas/formProduto.php';
     include '../telas/footer.php';
        
+}
+
+if(isset($_POST['editar'])) {
+
 }
 
 $lista = $objcadastroproduto->listar();

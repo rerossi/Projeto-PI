@@ -16,7 +16,9 @@ include '../telas/navbar.php';
 
     include '../banco/conecta.php';
 
-    $query = $bd->query("SELECT * FROM produto WHERE id = 18");
+    $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
+
+    $query = $bd->query("SELECT * FROM produto WHERE id = $id");
     $registros = $query->fetchAll();
 
     foreach ($registros as $registro) :
