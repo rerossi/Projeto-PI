@@ -66,12 +66,7 @@
         <li class="nav-item">
           <a class="nav-link" href="../produto/catalogo.php" style="color:rgb(20, 124, 162);">Catálogo</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../crud/crud.php" style="color:rgb(20, 124, 162);">Editar</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../crud/crud.php" style="color:rgb(20, 124, 162);">Excluir</a>
-        </li>
+        
         
 
         <?php  
