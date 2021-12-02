@@ -5,3 +5,4 @@
     define('DB_NAME', 'rentall');
     define('DB_USER', 'root');
     define('DB_PASS', '');
+

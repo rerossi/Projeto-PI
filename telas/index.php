@@ -34,13 +34,13 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item text-center active" data-bs-interval="5000">
-            <img src="../imagens/carrousel.png" class="" alt="...">
+            <img src="../imagens/carrosel.png" class="" alt="...">
             <div class="carousel-caption d-none d-md-block">
 
             </div>
           </div>
           <div class="carousel-item text-center" data-bs-interval="5000">
-            <img src="../imagens/carrousel.png" class="" alt="...">
+            <img src="../imagens/carrosel-2.png" class="" alt="...">
             <div class="carousel-caption d-none d-md-block">
 
             </div>
