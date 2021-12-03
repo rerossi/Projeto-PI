@@ -1,5 +1,10 @@
-<main> 
 <link rel="stylesheet" href="../css/lista.css">
+<main> 
+    
+<a href="../telas/index.php">
+<img src="../imagens/logo-branco.png" style="width: 100px;">
+</a>
+
 <div class="text-center justify-content-center d-flex align-items-center pb-3 "> 
 <button class="btn botao btn-dark"><a href = "../telas/formProduto.php" class="text-decoration-none text-reset">  Cadastrar Produto  </a></button>
 </div>

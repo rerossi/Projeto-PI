@@ -6,6 +6,7 @@
     color: black;
 }
 
+
 body {
     background-repeat: no-repeat;
     min-height: 100vh;
@@ -15,6 +16,8 @@ body {
     justify-content: center;
     background: linear-gradient(180deg, #247ba0 50%, white 50%);
 }
+
+
 h2{
    text-align: center;
 }

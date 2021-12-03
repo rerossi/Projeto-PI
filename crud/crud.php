@@ -11,6 +11,7 @@ include 'classes/cadastroproduto.class.php';
 $objcadastroproduto = new cadastroproduto($bd);
 
 include '../telas/header.php';
+//include '../telas/navbar.php';
 
 if (isset($_POST['excluir'])) {
 
@@ -19,11 +20,12 @@ if (isset($_POST['excluir'])) {
 
 if (isset($_POST['editar'])) {
 
+    $id = ($_POST['editar']);
     $d = $objcadastroproduto->listar($_POST['editar']);
 
     $produto = $d[$_POST['editar']];
 
-    include '../telas/formProduto.php';
+    include '../telas/formEdita.php';
     die;
 }
 

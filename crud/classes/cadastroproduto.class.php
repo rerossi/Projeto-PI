@@ -44,6 +44,7 @@ class cadastroproduto {
 
     function salvar($dados)
    {
+
        $id = $dados['id'];
        $titulo = $dados['titulo'];
        $opcao = $dados['opcao'];
@@ -53,6 +54,7 @@ class cadastroproduto {
        $descricao = $dados['descricao'];
        $imagem = $dados['upload'];
 
+       var_dump($dados); die;
        //Prerar a consulta do bd
        $stmt = $this->bd->prepare('UPDATE produto SET 
                                        titulo = :titulo, 
