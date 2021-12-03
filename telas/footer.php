@@ -46,7 +46,7 @@
     <!-- Footer -->
     <footer class="text-center text-lg-start text-white" style="background-color: rgb(20, 124, 162)">
         <!-- Grid container -->
-        <div class="container p-4 pb-0">
+        <div class="container p-2 pb-0">
             <!-- Section: Links -->
             <section class="">
                 <!--Grid row-->

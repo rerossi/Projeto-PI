@@ -40,6 +40,9 @@ include '../telas/header.php';
 
             <input type="submit" value="Cadastrar">
 
+            <a class="text-center mt-3" style ="text-decoration:none; color: #808080" href="../telas/index.php">
+              <span> Continue como visitante </span>
+            </a>
           </form>
       </main>
   </body>

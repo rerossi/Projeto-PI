@@ -23,8 +23,9 @@ class cadastroproduto {
             $lista[$registro['id']] = $registro;  
             
         }
-
+        if (isset($lista)){
         return $lista;
+        }
     }
 
     function excluir($id){
@@ -42,51 +43,4 @@ class cadastroproduto {
        }
     }
 
-    function salvar($dados)
-   {
-
-       $id = $dados['id'];
-       $titulo = $dados['titulo'];
-       $opcao = $dados['opcao'];
-       $preco = $dados['preco'];
-       $modelo = $dados['modelo'];
-       $marca = $dados['marca'];
-       $descricao = $dados['descricao'];
-       $imagem = $dados['upload'];
-
-       var_dump($dados); die;
-       //Prerar a consulta do bd
-       $stmt = $this->bd->prepare('UPDATE produto SET 
-                                       titulo = :titulo, 
-                                       categoria = :categoria, 
-                                       preco = :preco, 
-                                       modelo = :modelo, 
-                                       marca = :marca,
-                                       descricao = :descricao,
-                                       imagem = :imagem
-                                   WHERE
-                                       id = :id');
-
-       $stmt->bindParam( ':id', $id);
-       $stmt->bindParam( ':titulo', $titulo);
-       $stmt->bindParam( ':categoria', $opcao);
-       $stmt->bindParam( ':preco', $preco);
-       $stmt->bindParam( ':modelo', $modelo);
-       $stmt->bindParam( ':marca', $marca);
-       $stmt->bindParam( ':descricao', $descricao);
-       $stmt->bindParam( ':imagem', $imagem);
-       
-       //Executar a consulta no bd
-        if ( $stmt->execute() ) {
-
-            //retornar true ou false
-            return true;
-
-        } else {
-
-            return false;
-        }
-   }
-
- }
-
+}

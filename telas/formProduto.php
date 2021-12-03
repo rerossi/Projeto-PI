@@ -57,7 +57,7 @@ include 'header.php';
 
       <input type="submit" value="Cadastrar">
 
-      <a class="text-center mt-4" style="text-decoration: none; color: #000" href="../crud/crud.php">
+      <a class="text-center mt-4" style="text-decoration: none; color: #808080" href="../crud/crud.php">
       <spam> Voltar </spam>
       </a>
       
