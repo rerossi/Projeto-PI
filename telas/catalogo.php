@@ -12,7 +12,7 @@ include '../telas/navbar.php';
 
 <main class="">
 
-        <!--CARROuSSEL-->
+        <!-- CARROuSSEL
     <section class="pt-2 container">
         <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -48,10 +48,10 @@ include '../telas/navbar.php';
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-    </section>
+    </section> -->
 
-    <div class="text-center d-flex align-items-center justify-content-center my-2" style="background-color: rgb(20, 124, 162); height:80px;"> 
-        <h3 class=" text-uppercase font-weight-ligth" style="color:white; font-weight: lighter"> Catálogo </h3>
+    <div class="text-center d-flex align-items-center justify-content-center" style="background-color: #DCDCDC; height:80px;"> 
+        <h3 class=" text-uppercase font-weight-ligth" style="color: Rgb(20, 124, 162); font-weight: lighter"> Catálogo </h3>
     </div>
 
     <section class="container"> 

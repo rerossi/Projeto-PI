@@ -26,7 +26,7 @@ include '../telas/navbar.php';
     ?>
     
         <!--CARROuSSEL-->
-        <section class="pt-2 container">
+          <!-- <section class="pt-2 container">
         <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -34,7 +34,7 @@ include '../telas/navbar.php';
                 <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
 
-            <div class="carousel-inner">
+           <div class="carousel-inner">
 
                 <div class="carousel-item text-center active" data-bs-interval="5000">
                     <img src="../imagens/carrosel-2.png" class="" alt="...">
@@ -61,10 +61,10 @@ include '../telas/navbar.php';
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-    </section>
+    </section> -->
 
-    <div class="text-center d-flex align-items-center justify-content-center my-2" style="background-color: rgb(20, 124, 162); height:80px;"> 
-        <h3 class=" text-uppercase font-weight-ligth"  style="color:white; font-weight: lighter" id="categoria"><?php echo $registro['categoria'] ?></h3>
+    <div class="text-center d-flex align-items-center justify-content-center " style="background-color: #DCDCDC; height:80px;"> 
+        <h3 class=" text-uppercase font-weight-ligth"  style="color: rgb(20, 124, 162); font-weight: lighter" id="categoria"><?php echo $registro['categoria'] ?></h3>
     </div>
 
         <!-- <h2 class="text-center" id="categoria"><?php echo $registro['categoria'] ?></h2> -->
