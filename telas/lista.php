@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="../css/lista.css">
 <main> 
     
-<a href="../telas/index.php">
+<a clas = "my-5" href="../telas/index.php">
 <img src="../imagens/logo-branco.png" style="width: 100px;">
 </a>
 

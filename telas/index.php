@@ -17,8 +17,7 @@
       include '../telas/navbar.php';
   ?>
 
-  
- 
+<link rel="stylesheet" href="../css/index.css">
 
   <main>
     <!--CARROuSSEL-->
@@ -34,7 +33,7 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item text-center active" data-bs-interval="5000">
-            <img src="../imagens/carrosel.png" class="" alt="...">
+            <img src="../imagens/carrosel-2.png" class="" alt="...">
             <div class="carousel-caption d-none d-md-block">
 
             </div>
@@ -46,7 +45,7 @@
             </div>
           </div>
           <div class="carousel-item text-center">
-            <img src="../imagens/carrousel.png" class="" alt="...">
+            <img src="../imagens/carrosel-2.png" class="" alt="...">
             <div class="carousel-caption d-none d-md-block">
 
             </div>
@@ -64,11 +63,11 @@
     </section>
 
   </main>
-  <section class="my-5 container">
+<section class="my-5 container">
 
     <div class="row  justify-content-center ">
       <div class=" p-3 col-2 border border-2 border-dark text-center my-1 mx-1 ">
-
+      
         <img src="../imagens/ferramentas.png" width="40%" class="my-1">
         <h3 class="fs-4">Ferramentas</h3>
       </div>
@@ -123,9 +122,11 @@
     </div>
     </div>
 
-  </section>
+  </section> 
 
-  <div class="container-fluid">
+
+
+  <div style="background-color: rgb(20, 124, 162);">
     <?php 
        include '../telas/footer.php';
     ?>

@@ -41,8 +41,8 @@ include '../telas/navbar.php';
     </section>
 </main>
 
-<div class="container-fluid">
-    <?php
-    include '../telas/footer.php';
+<div style="background-color: rgb(20, 124, 162);">
+    <?php 
+       include '../telas/footer.php';
     ?>
-</div>
+  </div>

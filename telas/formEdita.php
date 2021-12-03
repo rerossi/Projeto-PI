@@ -57,7 +57,11 @@ include 'header.php';
         <input type="file" class="form-control" name="upload" id="upload" aria-describedby="inputGroupFileAddon04" aria-label="Upload" required value="<?php echo $produto['imagem'] ?? ''; ?>">
       </div>
 
-      <input type="submit" value="Editar">
+      <input type="submit" value="Alterar dados">
+
+      <a class="text-center mt-4" style="text-decoration: none; color: #000" href="../crud/crud.php">
+      <spam> Cancelar </spam>
+      </a>
 
       </div>
     </form>
