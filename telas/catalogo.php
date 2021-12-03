@@ -69,7 +69,7 @@ include '../telas/navbar.php';
             ?>
                 <div class="card mx-4 pt-4 pb-3 mt-3" style="width: 18rem;">
                     <div class="box-img">
-                        <img src="<?php echo "http://localhost:8080/Projeto-PI/produto/" . $registro['imagem'] ?>" id="imgProduto" class="card-img-top" alt="...">
+                        <img src="<?php echo "http://localhost/Projeto-PI/produto/" . $registro['imagem'] ?>" id="imgProduto" class="card-img-top" alt="...">
                     </div>
                     <section class="card-body my-auto  ">
                         <h5 class="card-title" id="titulo"><?php echo $registro['titulo'] ?></h5>

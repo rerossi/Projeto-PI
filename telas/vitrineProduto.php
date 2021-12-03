@@ -73,7 +73,7 @@ include '../telas/navbar.php';
             <div class="row">
 
                 <div class="col">
-                    <img src="<?php echo "http://localhost:8080/Projeto-PI/produto/" . $registro['imagem'] ?>" alt="" class="box-img">
+                    <img src="<?php echo "http://localhost/Projeto-PI/produto/" . $registro['imagem'] ?>" alt="" class="box-img">
                 </div>
 
                 <div class="col">
