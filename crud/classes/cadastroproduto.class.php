@@ -2,16 +2,16 @@
 
 class cadastroproduto {
 
-    var $db;
+    public $db;
 
     function __construct($bd){
 
         $this->bd = $bd;
     }
 
-    function listar($id=null){
+    function listar($id = null){
 
-        $id = preg_replace( '/\D/', '', $id);
+        $id = preg_replace( '/\D/', '', $id ?? "");
 
         $strSql = !empty($id) ? "WHERE id = $id " : '';
 

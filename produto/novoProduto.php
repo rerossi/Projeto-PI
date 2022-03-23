@@ -71,3 +71,4 @@ if ($titulo && $opcao && $modelo && $marca && $descricao) {
 } else {
     echo 'Preencha todos os campos';
 }
+
