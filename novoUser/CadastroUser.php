@@ -1,11 +1,8 @@
 <?php 
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 // require_once('sessao/controle.php');
 require_once('../banco/conecta.php');
+require_once('../classes/Usuario.class.php');
 
 
 $nome = $_POST['nome'] ?? false;
@@ -14,34 +11,53 @@ $email = $_POST['email'];
 $senha = $_POST['senha'];
 $confirma = $_POST['confirma'];
 
-if(!($senha == $confirma)){
-    echo " As senhas não confere";
-    die();
-}
 
-$senha = password_hash($senha, PASSWORD_DEFAULT);
+class CadastroUser {
 
+    public function __construct($bd){
 
-if ($nome && $sobrenome && $email && $senha){
+        $user = new Usuario($bd);
 
-    $stmt = $bd->prepare('INSERT INTO login_user (nome, sobrenome, email, senha ) VALUES (:nome, :sobrenome, :email, :senha )');
+        if( !$user->saoIguais( $_POST['senha'], $_POST['confirma'])){
 
-    if ( $stmt->execute([':nome' => $nome,
-                        ':sobrenome' => $sobrenome,  
-                        ':email' => $email,
-                        ':senha' => $senha]) 
-    
-        ) {
+            echo "As senhas não conferem";
+            exit();
+        }
 
-            header('Location: ../telas/formlogin.php');       
+        $saida =  $user->cadastrar($_POST);
 
-    } else { 
-        echo '<pre>';
-        var_dump($stmt->errorInfo());
-            echo "Erro ao tentar gravar!";
+        if( $saida === true ){
+
+            header('Location: ../telas/formlogin.php');
+            
+
+        }
+
+        else{
+
+            switch($saida){
+
+                case 1:
+                    echo $saida[1];
+                    break;
+
+                case 2:
+                    echo $saida[2];
+                    break;
+
+                case 3:
+                    echo $saida[3];
+                    break;    
+                    
+                default:
+                
+                    echo "Erro desconhecido";
+            }
+        }
     }
-}   else {
-    echo 'Preencha todos os campos';
 }
+
+new CadastroUser($bd);
+
 
 
